@@ -11,16 +11,16 @@ rploaderver="0.10.0.0"
 build="main"
 redpillmake="prod"
 
-rploaderfile="https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/rploader.sh"
-rploaderrepo="https://github.com/pocopico/tinycore-redpill/raw/$build/"
-rploadergit="https://github.com/pocopico/tinycore-redpill.git"
+rploaderfile="https://raw.githubusercontent.com/grimandreas/tinycore-redpill/$build/rploader.sh"
+rploaderrepo="https://github.com/grimandreas/tinycore-redpill/raw/$build/"
+rploadergit="https://github.com/grimandreas/tinycore-redpill.git"
 
 redpillextension="https://github.com/pocopico/rp-ext/raw/main/redpill${redpillmake}/rpext-index.json"
 modextention="https://github.com/pocopico/rp-ext/raw/main/rpext-index.json"
-modalias4="https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/modules.alias.4.json.gz"
-modalias3="https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/modules.alias.3.json.gz"
-dtcbin="https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/tools/dtc"
-dtsfiles="https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build"
+modalias4="https://raw.githubusercontent.com/grimandreas/tinycore-redpill/$build/modules.alias.4.json.gz"
+modalias3="https://raw.githubusercontent.com/grimandreas/tinycore-redpill/$build/modules.alias.3.json.gz"
+dtcbin="https://raw.githubusercontent.com/grimandreas/tinycore-redpill/$build/tools/dtc"
+dtsfiles="https://raw.githubusercontent.com/grimandreas/tinycore-redpill/$build"
 timezone="UTC"
 ntpserver="pool.ntp.org"
 userconfigfile="/home/tc/user_config.json"
@@ -1202,7 +1202,7 @@ function postupdatev1() {
 
         echo "bspatch does not exist, bringing over from repo"
 
-        curl --insecure --location "https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/tools/bspatch" -O
+        curl --insecure --location "https://raw.githubusercontent.com/grimandreas/tinycore-redpill/$build/tools/bspatch" -O
 
         chmod 777 bspatch
         sudo mv bspatch /usr/local/bin/
@@ -1440,7 +1440,7 @@ function downloadextractorv2() {
         sudo rm -rf ../oldpat.tar.gz
         sudo rm -rf hda1.tgz
 
-        curl --insecure --silent --location https://github.com/pocopico/tinycore-redpill/blob/main/tools/xxd?raw=true --output xxd
+        curl --insecure --silent --location https://github.com/grimandreas/tinycore-redpill/blob/main/tools/xxd?raw=true --output xxd
 
         chmod +x xxd
 
@@ -3389,7 +3389,7 @@ function getvars() {
 
         echo "bspatch does not exist, bringing over from repo"
 
-        curl --insecure --location "https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/tools/bspatch" -O
+        curl --insecure --location "https://raw.githubusercontent.com/grimandreas/tinycore-redpill/$build/tools/bspatch" -O
 
         chmod 777 bspatch
         sudo mv bspatch /usr/local/bin/
@@ -3760,7 +3760,7 @@ if [ -z "$GATEWAY_INTERFACE" ]; then
         if [ -f interactive.sh ]; then
             . ./interactive.sh
         else
-            curl --insecure --location --progress-bar "https://github.com/pocopico/tinycore-redpill/raw/$build/interactive.sh" --output interactive.sh
+            curl --insecure --location --progress-bar "https://github.com/grimandreas/tinycore-redpill/raw/$build/interactive.sh" --output interactive.sh
             . ./interactive.sh
             exit 99
         fi
